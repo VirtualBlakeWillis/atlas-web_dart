@@ -1,8 +1,9 @@
 class User {
-  String name;
+  String? name;
 
-  User(this.name);
-
+  User(String name) {
+    this.name = name;
+  }
   void showName() {
     print('Hello $name');
   }
