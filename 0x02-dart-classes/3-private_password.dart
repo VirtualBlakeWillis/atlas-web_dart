@@ -1,5 +1,10 @@
 class Password {
-  String _password = '';
+  String _password ='';
+
+
+  Password({String password = ''}) {
+    _password = password;
+  }
 
 
   bool isValid() {
