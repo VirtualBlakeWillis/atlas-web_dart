@@ -5,10 +5,11 @@ class User extends Password{
   int? age;
   double? height;
   int? id;
-  String user_password;
 
-  User({this.name, this.age, this.height, this.id, this.user_password = ''}) : super(password: user_password);
+  User({this.name, this.age, this.height, this.id, String user_password = ""}) : super(password: user_password);
 
+  String get user_password => this.password;
+  set user_password(String newPassword) => this.password = newPassword;
   toJson() {
     return {
       'id': id,
@@ -23,10 +24,11 @@ class User extends Password{
       name: userJson['name'],
       age: userJson['age'],
       height: userJson['height'],
+      user_password: userJson['user_password']
     );
   }
 
   toString() {
-    return 'User(id : $id ,name: $name, age: $age, height: $height, password: ${password})';
+    return 'User(id : $id ,name: $name, age: $age, height: $height, password: ${isValid()})';
   }
 }
