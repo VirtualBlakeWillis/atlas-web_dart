@@ -17,7 +17,7 @@ Future<double> calculateTotal() async {
 
 
   } catch (err) {
-    return (-1);
+    return (-1.0);
   }
 
 }
