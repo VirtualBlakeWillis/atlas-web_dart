@@ -29,6 +29,6 @@ class User extends Password{
   }
 
   toString() {
-    return 'User(id : $id ,name: $name, age: $age, height: $height, password: ${isValid()})';
+    return 'User(id : $id ,name: $name, age: $age, height: $height, Password: ${isValid()})';
   }
 }
